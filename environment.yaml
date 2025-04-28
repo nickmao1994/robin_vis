@@ -1,0 +1,20 @@
+##Setup environment for Mental Health In Tech Dashboard
+##conda env create -f environment.yaml
+
+name: 'robin'
+channels:
+  - conda-forge
+  - defaults
+  - plotly
+dependencies:
+  - ipykernel
+  - ipython>=7.15
+  # - gunicorn
+  - scipy
+  - pandas
+  - numpy
+  - plotly
+  - pip
+  - pip:
+    - dash
+    - dash_bootstrap_components
