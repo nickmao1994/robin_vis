@@ -204,7 +204,7 @@ def tab1():
         dbc.Row([
             dbc.Col([
                 html.H3("Employment in Malaysia Over Time", className="text-center mb-4"),
-                dcc.Graph(id="emp-line-mala", figure=fig1)
+                dcc.Graph(id="emp-line-mala", figure=fig1, style={"height": "500px"})
             ], width=12)
         ]),
         dbc.Row([
@@ -217,7 +217,7 @@ def tab1():
                     value="Johor",
                     style={'margin-bottom': '20px'}
                 ),
-                dcc.Graph(id='emp-line-graph')
+                dcc.Graph(id='emp-line-graph', style={"height": "500px"})
             ], width=12)
         ])
     ], fluid=True)
@@ -227,7 +227,7 @@ def tab2():
         dbc.Row([
             dbc.Col([
                 html.H3("Labour Force Participation Rate in Malaysia", className="text-center mb-4"),
-                dcc.Graph(id="part-line-mala", figure=fig2)
+                dcc.Graph(id="part-line-mala", figure=fig2, style={"height": "500px"})
             ], width=12)
         ]),
         dbc.Row([
@@ -240,7 +240,7 @@ def tab2():
                     value="Johor",
                     style={'margin-bottom': '20px'}
                 ),
-                dcc.Graph(id='part-line-graph')
+                dcc.Graph(id='part-line-graph', style={"height": "500px"})
             ], width=12)
         ]),
     ], fluid=True)
@@ -274,7 +274,7 @@ def tab3():
         dbc.Row([
             dbc.Col([
                 html.H3("Flood Impact on Employment", className="text-center mb-4"),
-                dcc.Graph(figure=fig_flood)
+                dcc.Graph(figure=fig_flood, style={"height": "500px"})
             ], width=12)
         ]),
         dbc.Row([
