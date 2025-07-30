@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from dash import Dash, dcc, html, Input, Output, callback
+from dash import Dash, dcc, html, Input, Output, callback, no_update
 import dash_bootstrap_components as dbc
 import json
 from datetime import datetime
@@ -398,7 +398,7 @@ def employment_part(state):
 )
 def update_flood_summary(active_tab):
     if active_tab != "tab-3":
-        return dash.no_update
+        return no_update
     
     # 获取受洪水影响最严重的5个州
     top_states = df_flood_events.groupby('State/Country')['Total Affected'].sum().nlargest(5).reset_index()
